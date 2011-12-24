@@ -26,7 +26,7 @@ class ClockFrame(wx.Frame):
         self.Centre()
     def OnTimer(self, event):
         t = time.localtime(time.time())
-        st = time.strftime("%H:%M:%S",t)
+        st = time.strftime(" %H:%M:%S",t)
         self.clock_tx.SetLabel(st)
 
 class BelynApp(wx.App):
