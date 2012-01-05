@@ -12,7 +12,7 @@ class ClockFrame(wx.Frame):
 
         box.Add(self.clock_tx,0,wx.ALIGN_CENTER|wx.LEFT)
         self.SetSizer(box)
-        self.clock_tx.SetForegroundColour(wx.GREEN)
+        self.clock_tx.SetForegroundColour((50,50,50))
         font = wx.Font(200, wx.DEFAULT, wx.NORMAL, 0)
         self.clock_tx.SetFont(font)
         self.clock_tx.Center()

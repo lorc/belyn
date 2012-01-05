@@ -12,6 +12,10 @@ import time
 def dashboard_view(request):
     return {'time':time.asctime()}
 
+@view_config(route_name='downloader', renderer='downloader.mako')
+def downloader_view(request):
+    return {'time':time.asctime()}
+
 if __name__ == '__main__':
     here = os.path.dirname(os.path.abspath(__file__))
     # configuration settings
@@ -25,6 +29,7 @@ if __name__ == '__main__':
     config = Configurator(settings=settings, session_factory=session_factory)
     config.add_static_view('static', os.path.join(here, 'static'))
     config.add_route('dashboard','/')
+    config.add_route('downloader','/downloader')
     config.scan()
     # serve app
     app = config.make_wsgi_app()
