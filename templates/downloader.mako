@@ -5,7 +5,7 @@
   <h1>Качалка</h1>
 </div>
 <div class="row">
-  <div class="span10">
+  <div class="span16">
     <form>
       <fieldset>
         <div class="clearfix">

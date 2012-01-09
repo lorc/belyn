@@ -19,7 +19,7 @@
         text-align: center; /* center align it with the container */
       }
       .container {
-        width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+        width: 960px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
       }
 
       /* The white background content wrapper */
@@ -43,16 +43,16 @@
       }
 
       /* Styles you shouldn't keep as they are for displaying this base example only */
-      .content .span10,
+/*      .content .span10,
       .content .span4 {
         min-height: 500px;
-      }
+      } */
       /* Give a quick and non-cross-browser friendly divider */
-      .content .span4 {
+/*      .content .span4 {
         margin-left: 0;
         padding-left: 19px;
         border-left: 1px solid #eee;
-      }
+      } */
 
       .topbar .btn {
         border: 0;
@@ -67,11 +67,12 @@
         <div class="container">
           <a class="brand" href="#">Belyn</a>
           <ul class="nav">
-            <li><a href="#">Глагне</a></li>
+            <li><a href="${request.route_url('dashboard')}">Глагне</a></li>
             <li><a href="#">Монитор</a></li>
             <li><a href="#">Часы</a></li>
             <li><a href="#">Слайдшоу</a></li>
-            <li><a href="/downloader">Качалка</a></li>
+            <li><a href="${request.route_url('player')}">Плеер</a></li>
+            <li><a href="${request.route_url('downloader')}">Качалка</a></li>
           </ul>
         </div>
       </div>
@@ -85,9 +86,9 @@
         %endfor
       </div>
       %endif
-      <div class="content">
+      <div class="content"> 
         ${next.body()}
-      </div>
+      </div> 
     </div>
   </body>
 </html>
