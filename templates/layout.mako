@@ -7,6 +7,7 @@
     <meta name="author" content="Volodymyr Babchuk">
     <link rel="shortcut icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="/static/bootstrap.css">
+    <script src="/static/jquery-1.7.1.min.js"></script>
     <style type="text/css">
       /* Override some defaults */
       html, body {
